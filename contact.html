@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Anthony Debiève</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="qualites.html">Qualités & Atouts</a></li>
+      <li><a href="interets.html">Centres d’intérêt</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Me contacter</h1>
+    <p>N’hésitez pas à m’écrire pour toute question, opportunité ou prise de contact :</p>
+
+    <form action="https://formspree.io/f/xovwljyb" method="POST">
+      <!-- Champ anti-spam -->
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label for="name">Nom</label>
+      <input type="text" id="name" name="Nom" placeholder="Votre nom" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="Email" placeholder="Votre email" required>
+
+      <label for="subject">Sujet</label>
+      <input type="text" id="subject" name="Sujet" placeholder="Sujet du message" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="Message" placeholder="Votre message..." required></textarea>
+
+      <input class="submit-btn" type="submit" value="Envoyer">
+    </form>
+  </div>
+</body>
+</html>
