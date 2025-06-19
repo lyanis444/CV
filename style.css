@@ -228,21 +228,33 @@ textarea {
 /* === RESPONSIVE DESIGN === */
 
 @media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
   .navbar ul {
     position: absolute;
     top: 65px;
     left: 0;
     right: 0;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.9);
     gap: 20px;
-    padding: 20px 0;
+    padding: 30px 0;
     display: none;
     text-align: center;
+    z-index: 99;
+    border-bottom: 1px solid #00d4ff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   }
 
   .navbar ul.active {
     display: flex;
+  }
+
+  .navbar a {
+    font-size: 1.3rem;
+    padding: 12px 0;
   }
 
   .hamburger {
@@ -278,6 +290,6 @@ textarea {
   }
 
   .navbar a {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
