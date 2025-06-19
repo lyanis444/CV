@@ -3,15 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html, body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   color: #f2f2f2;
   overflow-x: hidden;
 }
+
 body {
   position: relative;
 }
+
 body::before {
   content: "";
   position: fixed;
@@ -24,15 +27,18 @@ body::before {
   background-size: 400% 400%;
   animation: gradientMotion 20s ease infinite;
 }
+
 @keyframes gradientMotion {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(-10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+
 .container {
   max-width: 900px;
   margin: 50px auto;
@@ -43,29 +49,48 @@ body::before {
   backdrop-filter: blur(8px);
   animation: fadeIn 1.5s ease;
 }
+
 h1 {
   font-size: 2.5rem;
   text-align: center;
   color: #ffffff;
   margin-bottom: 5px;
 }
+
 h2 {
   color: #00d4ff;
   margin-top: 30px;
   border-bottom: 1px solid #00d4ff;
   padding-bottom: 5px;
 }
+
 p, li {
   line-height: 1.7;
 }
+
 ul {
   padding-left: 20px;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00d4ff;
+  text-decoration: underline;
+}
+
+/* === BUTTONS === */
+
 .button-container {
   text-align: center;
   margin-top: 40px;
 }
-.download-btn {
+
+.download-btn,
+.contact-btn {
   background: #00d4ff;
   color: #001e3c;
   padding: 12px 24px;
@@ -73,28 +98,59 @@ ul {
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.3s;
-}
-.download-btn:hover {
-  background: #00aaff;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
 }
 
-/* Menu de navigation */
+.download-btn:hover,
+.contact-btn:hover {
+  background: #00aaff;
+  transform: scale(1.05);
+}
+
+/* === NAVBAR === */
+
 .navbar {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 15px 0;
-  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 20px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.navbar-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar .logo {
+  color: #00d4ff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 30px;
 }
+
+.navbar li {
+  transition: transform 0.2s;
+}
+
+.navbar li:hover {
+  transform: translateY(-2px);
+}
+
 .navbar a {
   color: #00d4ff;
   text-decoration: none;
@@ -102,20 +158,24 @@ ul {
   font-size: 1.1rem;
   transition: color 0.3s;
 }
+
 .navbar a:hover {
   color: #ffffff;
 }
-a {
-  color: white;
-  text-decoration: none;
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
 
-a:hover {
-  color: #00d4ff; /* ou une autre couleur claire pour l'effet hover */
-  text-decoration: underline;
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #00d4ff;
+  transition: all 0.3s ease;
 }
-
-
 
 /* === FORMULAIRE DE CONTACT === */
 
@@ -164,19 +224,60 @@ textarea {
 .submit-btn:hover {
   background-color: #00aaff;
 }
-.contact-btn {
-  background: #00d4ff;
-  color: #001e3c;
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+
+/* === RESPONSIVE DESIGN === */
+
+@media (max-width: 768px) {
+  .navbar ul {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+    text-align: center;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
 
-.contact-btn:hover {
-  background: #00aaff;
-  transform: scale(1.05);
+@media (max-width: 1024px) {
+  .container {
+    margin: 30px 20px;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .download-btn,
+  .contact-btn,
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .navbar .logo {
+    font-size: 1.2rem;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+  }
 }
