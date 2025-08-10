@@ -1,65 +1,182 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Anthony Debiève - CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Debiève // Portfolio Interactif</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.navbar ul');
-
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-</script>
-
 <body>
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="competences.html">Compétences</a></li>
-      <li><a href="qualites.html">Qualités & Atouts</a></li>
-      <li><a href="interets.html">Centres d’intérêt</a></li>
-	  <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <div id="app-wrapper">
+        <header id="main-header">
+            <div>
+                <h1 class="glitch" data-text="Anthony Debiève">Anthony Debiève</h1>
+                <p>Stage Technicien Informatique</p>
+            </div>
+            <nav id="sidebar-nav">
+                <div class="nav-indicator"></div>
+                <ul>
+                    <li><a href="#accueil" class="nav-link active"><span>Accueil</span></a></li>
+                    <li><a href="#competences" class="nav-link"><span>Compétences</span></a></li>
+                    <li><a href="#qualites" class="nav-link"><span>Qualités</span></a></li>
+                    <li><a href="#interets" class="nav-link"><span>Intérêts</span></a></li>
+                    <li><a href="#contact" class="nav-link"><span>Contact</span></a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <div class="container">
-    <h1>Anthony Debiève</h1>
-    <p style="text-align: center; font-style: italic; color: #c0c0c0;">Stage Technicien Informatique</p>
+        <main id="content-panel">
+            <section id="accueil" class="content-card">
+                <h2>Profil & Formations</h2>
+                <div class="card-content">
+                    <div>
+                        <h3>Formations</h3>
+                        <ul>
+                          <li><strong>2024–2025 :</strong> CESS + Technicien informatique – EAFC Jean-Meunier</li>
+                          <li><strong>2023–2024 :</strong> CESS + Gestion de base + Anglais – EAFC Jean-Meunier</li>
+                          <li><strong>2012–2014 :</strong> Technicien en bureautique + Maintenance – IEPS</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Expériences Professionnelles</h3>
+                        <ul>
+                          <li><strong>2013 :</strong> Stage technicien informatique – Data Inc & NGK Baudour</li>
+                          <li><strong>2010 :</strong> Stage administratif – La Bonne Maison de Bouzanton</li>
+                          <li><strong>2004–2006 :</strong> Apprentissage boulangerie-pâtisserie – Michel SA</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-    <h2>Présentation</h2>
-    <p>Passionné par l’informatique et les nouvelles technologies, je suis motivé par le besoin d’apprendre, d’expérimenter et d’évoluer dans un environnement technique. Rigoureux, curieux et autonome, je cherche un stage où je pourrai mettre en pratique mes connaissances en bureautique, maintenance informatique, réseaux, tout en développant de nouvelles compétences concrètes sur le terrain.</p>
+            <section id="competences" class="content-card">
+              <h1>Compétences Techniques</h1>
 
-    <h2>Formations</h2>
-    <ul>
-      <li><strong>2024–2025 :</strong> CESS ( diplôme) + Technicien informatique ( en cour ) – Eafc Jean-Meunier Jemappes</li>
-      <li><strong>2023–2024 :</strong> CESS + Connaissance de Gestion de base ( diplôme ) + Anglais UF1/UF2 – Eafc Jean-Meunier Jemappes</li>
-      <li><strong>2012–2014 :</strong> Technicien en bureautique ( diplôme ) + Maintenance Hardware/Linux/Vidéo surveillance – IEPS Jemappes</li>
-      <li><strong>2010 :</strong> Orientation professionnelle + PMTIC – CPAS Mons</li>
-      <li><strong>2006–2008 :</strong> Études techniques en boulangerie-pâtisserie – ETH Saint-Ghislain</li>
-      <li><strong>2004–2006 :</strong> Apprentissage boulangerie – Michel SA Dour / IFAPME</li>
-      <li><strong>2000–2004 :</strong> Enseignement secondaire général – Athénée Royal de Dour</li>
-    </ul>
+              <h2>Bureautique</h2>
+              <p>Maîtrise des outils professionnels : Microsoft Office (Word, Excel, PowerPoint, Access), Google Drive, Microsoft Teams, OneDrive. Réalisation de bases de données Access pour un restaurant et un magasin d'informatique.</p>
+          
+              <h2>Base de données</h2>
+              <p>Création de bases de données sous Microsoft Access avec formulaires, requêtes, rapports. Notions de SQL pour l'interrogation et la gestion des données relationnelles.</p>
+          
+              <h2>Réseaux & Systèmes</h2>
+              <p>Configuration de réseaux locaux (LAN), gestion de routeurs et d’imprimantes réseau, administration de systèmes Windows et notions de Linux (Ubuntu/Debian).</p>
+          
+              <h2>NAS Synology & Déploiement réseau</h2>
+              <p>Paramétrage avancé d’un NAS Synology : RAID (RAID 0, 1, SHR), utilisateurs, permissions, sécurité. Accès distant sécurisé via <strong>QuickConnect</strong> et redirections de ports. </p>
+              <p>Utilisation régulière des outils suivants :</p>
+              <ul>
+                <li><strong>Synology Drive</strong> – Synchronisation de fichiers</li>
+                <li><strong>DS File</strong> / <strong>DS Finder</strong> – Accès et gestion mobile</li>
+                <li><strong>Synology Chat</strong> – Communication locale</li>
+                <li><strong>DS Note</strong> – Prise de notes</li>
+                <li><strong>Active Backup</strong> – Sauvegarde centralisée</li>
+              </ul>
+              <p>Déploiement réseau via <strong>Docker + Iventoy</strong> : création d’un serveur PXE pour lancer des images ISO sur le réseau local sans clé USB. Solution rapide pour installer ou réparer des systèmes.</p>
+          
+              <h2>Virtualisation</h2>
+              <p>Création de machines virtuelles avec VirtualBox (Windows, Linux). Initiation à Proxmox (KVM/LXC) pour la gestion de conteneurs et d’environnements virtualisés en homelab.</p>
+          
+              <h2>VPN et accès sécurisé à distance</h2>
+              <p>Installation d’un serveur <strong>OpenVPN</strong> sur Linux pour accès sécurisé à distance. Configuration du <strong>VPN Synology</strong> pour créer des tunnels chiffrés entre domicile et appareil mobile/PC.</p>
+          
+              <h2>Sécurité Informatique</h2>
+              <p>Application des bonnes pratiques : mots de passe forts, antivirus, pare-feu, sauvegardes locales/cloud. Sensibilisation aux risques (phishing, accès non autorisé) et à la protection des données.</p>
+          
+              <h2>Maintenance Informatique</h2>
+              <p>Dépannage matériel (RAM, disque, carte mère), assemblage de PC, réinstallation de systèmes, détection de pannes, suppression de virus. Expérience en support technique de proximité.</p>
+          
+              <h2>Vidéo-surveillance</h2>
+              <p>Installation de systèmes de surveillance à usage privé. Paramétrage de caméras IP avec <strong>ZoneMinder</strong> (Linux) et <strong>Surveillance Station</strong> (NAS Synology). Configuration des alertes, accès distant sécurisé, gestion du stockage vidéo. Sensibilisation aux aspects juridiques de la surveillance personnelle.</p>
+          
+              <h2>Domotique & Home Assistant</h2>
+              <p>Expérience avec <strong>Home Assistant</strong> : plateforme locale pour la gestion des objets connectés. Intégration du protocole <strong>Tuya</strong> pour piloter :</p>
+              <ul>
+                <li>Prises connectées (planification, suivi de consommation)</li>
+                <li>Ampoules/lampes intelligentes (variation d’intensité et couleur)</li>
+                <li>Automatisations (allumage selon horaire ou présence)</li>
+              </ul>
+              <p>Ajout de composants via Tuya, personnalisation des dashboards, accès sécurisé à distance, familiarité avec les protocoles Wi-Fi.</p>
+          
+              <h2>Web & CMS</h2>
+              <p>Création de sites WordPress (thèmes, extensions, contenus) et gestion de boutiques PrestaShop. Utilisation de <strong>Canva</strong> pour concevoir des supports visuels : flyers, affiches, cartes de visite.</p>
+          
+              <h2>IA & autonomie</h2>
+              <p>Utilisation d’<strong>IA</strong> pour générer du code, résoudre des erreurs, produire des documents techniques, traduire, apprendre plus rapidement. Approche autonome, proactive et technique dans tous les domaines abordés.</p>
+            </section>
 
-    <h2>Expériences Professionnelles</h2>
-    <ul>
-      <li><strong>2013 :</strong> Stage technicien informatique / bureautique – Data Inc & NGK Baudour Hornu</li>
-      <li><strong>2010 :</strong> Stage administratif – La Bonne Maison de Bouzanton, Mons</li>
-      <li><strong>2004–2006 :</strong> Apprentissage boulangerie-pâtisserie – Michel SA Dour</li>
-      <li><strong>2002–2003 :</strong> Apprentissage boulangerie-pâtisserie – Boulangerie Athis</li>
-    </ul>
+            <section id="qualites" class="content-card">
+              <h1>Qualités & Atouts</h1>
 
-    <h2>Langues</h2>
-    <p><strong>Français :</strong> courant</p>
-    <p><strong>Anglais :</strong> Anglais : Niveau A2 (utilisateur élémentaire). Lecture fonctionnelle de l’anglais technique et informatique. Capable de comprendre des manuels d’utilisation, des documentations logicielles et des instructions de base en anglais dans un contexte professionnel. </p>
-    <!-- Bouton de contact -->
-  <div class="button-container">
-  <a href="contact.html" class="contact-btn">Me contacter</a>
-  </div>
+              <p>Au-delà des compétences techniques, je crois que les qualités humaines et la posture professionnelle font toute la différence dans un environnement de travail. Voici les valeurs et comportements que je mets en œuvre au quotidien.</p>
+          
+              <h2>Qualités personnelles</h2>
+              <ul>
+                <li><strong>Sérieux et ponctualité :</strong> Toujours respectueux des horaires et des délais, que ce soit en formation ou en stage.</li>
+                <li><strong>Curiosité technique :</strong> J’expérimente régulièrement de nouveaux outils (Home Assistant, NAS, virtualisation...).</li>
+                <li><strong>Écoute et analyse :</strong> Capable de comprendre les besoins des utilisateurs avant d’intervenir, surtout en environnement non technique.</li>
+                <li><strong>Adaptabilité :</strong> À l’aise dans différents contextes : travail seul, en équipe ou dans des environnements contraints.</li>
+                <li><strong>Autonomie :</strong> J’apprends de façon autodidacte via des documentations, forums ou outils comme ChatGPT.</li>
+              </ul>
+          
+              <h2>Atouts professionnels</h2>
+              <ul>
+                <li><strong>Organisation et rigueur :</strong> Planification de tâches, logique dans le dépannage, bonne gestion des priorités.</li>
+                <li><strong>Polyvalence :</strong> À l’aise en bureautique, maintenance, réseaux, gestion de NAS, CMS et domotique.</li>
+                <li><strong>Communication claire :</strong> Capacité à vulgariser les problèmes techniques pour les utilisateurs non spécialistes.</li>
+                <li><strong>Souci du service :</strong> Toujours orienté solution et qualité de service, même dans les petits détails.</li>
+              </ul>
+          
+              <h2>Valeurs professionnelles</h2>
+              <ul>
+                <li><strong>Amélioration continue :</strong> Je veille à toujours progresser, tester, mettre à jour mes outils et pratiques.</li>
+                <li><strong>Fiabilité :</strong> Quand je m’engage sur une tâche, je la termine proprement et dans les temps.</li>
+                <li><strong>Discrétion et respect de la confidentialité :</strong> Surtout dans les contextes de sécurité, de sauvegarde et de vidéosurveillance.</li>
+              </ul>
+          
+              <blockquote style="margin-top: 30px; font-style: italic; color: #a8b2d1; text-align: center;">
+                "Un bon technicien ne sait pas tout, mais il sait toujours où chercher."
+              </blockquote>
+            </section>
 
-  </div>
+            <section id="interets" class="content-card">
+              <h1>Centres d’intérêt</h1>
+
+              <h2>Bonsaïs</h2>
+              <p>Le travail des bonsaïs me passionne car il demande patience, régularité et sens du détail — des qualités que je retrouve aussi en informatique. C’est un loisir méditatif qui m’aide à développer ma concentration et ma persévérance.</p>
+          
+              <h2>Lecture technologique</h2>
+              <p>Je consacre beaucoup de temps à lire des articles, des tutoriels, des documentations sur les systèmes, réseaux, IA ou nouvelles solutions logicielles. Cette curiosité constante alimente ma montée en compétence et me permet de rester à jour sur les tendances du secteur.</p>
+          
+              <h2>Nature et animaux</h2>
+              <p>J’aime passer du temps en pleine nature et m’occuper des animaux. Cela m’apporte un bon équilibre entre vie numérique et réalité. Cela nourrit également mon sens de l’observation et mon calme, utile dans des situations complexes à résoudre.</p>
+          
+              <h2>Gastronomie</h2>
+              <p>Ayant une formation initiale en boulangerie-pâtisserie, je garde un lien fort avec le monde culinaire. J’apprécie expérimenter de nouvelles recettes et comprendre les procédés techniques, ce qui renforce ma rigueur et ma créativité dans d'autres domaines.</p>
+          
+              <h2>Apprentissage continu</h2>
+              <p>Que ce soit à travers des formations, des projets personnels ou des essais de nouvelles technologies (Home Assistant, NAS, Iventoy, etc.), j’ai toujours l’envie d’apprendre. Cela me rend autonome, adaptable et enthousiaste face aux évolutions techniques.</p>
+            </section>
+
+            <section id="contact" class="content-card">
+              <h1>Me Contacter</h1>
+              <p>Pour toute question, opportunité ou simplement pour échanger, n'hésitez pas à utiliser le formulaire ci-dessous.</p>
+              <form id="contact-form" action="https://formspree.io/f/xovwljyb" method="POST">
+                  <input type="text" name="_honey" style="display:none" aria-hidden="true">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="text" id="name" name="Nom" placeholder="Votre nom" required>
+                  <input type="email" id="email" name="Email" placeholder="Votre email" required>
+                  <input type="text" id="subject" name="Sujet" placeholder="Sujet" required>
+                  <textarea id="message" name="Message" placeholder="Votre message..." required></textarea>
+                  <button class="submit-btn" type="submit">Envoyer le message</button>
+              </form>
+              <div id="form-status"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
